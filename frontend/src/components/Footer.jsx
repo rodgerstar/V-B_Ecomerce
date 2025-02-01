@@ -13,7 +13,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <p className="text-xl font-medium mb-5">COMPANY</p>
-                    <ul className="flex flex-col gap-1 text-gray-600">
+                    <ul className="flex flex-col gap-1 text-gray-400">
                         <li>Home</li>
                         <li>About us</li>
                         <li>Delivery</li>
@@ -22,7 +22,7 @@ const Footer = () => {
                 </div>
                 <div>
                     <p className="text-xl font-medium mb-5">GET IN TOUCH</p>
-                    <ul className="flex flex-col gap-1 text-gray-600">
+                    <ul className="flex flex-col gap-1 text-gray-400">
                         <li>+254-758-023-590</li>
                         <li>vandbwears@info.com</li>
                     </ul>
@@ -31,7 +31,7 @@ const Footer = () => {
 
 
             <div className="mt-10 border-t border-gray-300 text-center py-5 w-full">
-                <p className="text-sm text-gray-600">
+                <p className="text-sm text-gray-700">
                     © 2025 V & B - All Rights Reserved | powered by NEXEL
                 </p>
             </div>
