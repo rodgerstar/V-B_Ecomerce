@@ -50,9 +50,9 @@ const Navbar = () => {
 
                 <div
                 className='relative group'>
-                    <img
+                    <Link to='/login'><img
                         className='w-5 cursor-pointer'
-                        src={assets.profile_icon} alt=""/>
+                        src={assets.profile_icon} alt=""/></Link>
                     <div
                     className='group-hover:block hidden absolute dropdown-menu right-0 pt4'>
                         <div
