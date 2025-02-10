@@ -11,6 +11,7 @@ import { ToastContainer, } from 'react-toastify';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const backendUrl = import.meta.env.VITE_BACKEND_URL
+export const currency= '$'
 
 const App = () => {
 
