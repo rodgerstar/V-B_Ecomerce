@@ -158,8 +158,8 @@ const Collection = () => {
                                 onChange={toggleSubCategory}
                                 className="w-3"
                                 type="checkbox"
-                                value="Winterwear"
-                                checked={subCategory.includes("Winterwear")}
+                                value="Warmwear"
+                                checked={subCategory.includes("Warmwear")}
                             />{" "}
                             Warm-wear
                         </p>
@@ -176,7 +176,7 @@ const Collection = () => {
                         onChange={(e) => setSortType(e.target.value)}
                         className="border-2 border-gray-300 text-sm px-2 w-full max-w-[180px] truncate"
                     >
-                        <option value="relevant">Sort by:Relevant</option>
+                        <option value="relevant">Sort by: Price</option>
                         <option value="low-high">Low-High</option>
                         <option value="high-low">High-Low</option>
                     </select>

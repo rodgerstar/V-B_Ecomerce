@@ -110,7 +110,7 @@ const Add = ({token}) => {
                     <select onChange={(e) => setSubCategory(e.target.value)} className='w-full px-3 py-2'>
                         <option value="Topwear">Top wear</option>
                         <option value="Bottomwear">Bottom wear</option>
-                        <option value="Winterwear">Winter wear</option>
+                        <option value="Warmwear">Warm wear</option>
                     </select>
                 </div>
                 <div>
@@ -152,7 +152,6 @@ const Add = ({token}) => {
                     id="bestsellers"
                     checked={bestsellers}
                     onChange={(e) => {
-                        console.log("Checkbox changed to:", e.target.checked);
                         setBestsellers(e.target.checked);
                     }}
                 />

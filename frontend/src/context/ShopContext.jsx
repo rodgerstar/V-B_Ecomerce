@@ -6,7 +6,7 @@ import axios from "axios";
 export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
-    const currency = "$";
+    const currency = "Ksh. ";
     const delivery_fee = 10;
     const backendUrl = import.meta.env.VITE_BACKEND_URL
     const [search, setSearch] = useState('')
@@ -153,7 +153,7 @@ const ShopContextProvider = (props) => {
 
     const value = {
         products, currency, delivery_fee,
-        search, setSearch, showSearch, setShowSearch, cartItems, addToCart,
+        search, setSearch, showSearch, setShowSearch, cartItems, addToCart,setCartItems,
         getCartCount, updateQuantity, getCartAmount, navigate, backendUrl, setToken, token
     };
 
