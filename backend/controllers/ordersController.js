@@ -3,7 +3,7 @@ import userModel from "../models/userModel.js";
 import Stripe from "stripe";
 
 // global variables
-const currency = 'Kes'
+const currency = 'KES'
 const deliveryCharge = 100
 
 
