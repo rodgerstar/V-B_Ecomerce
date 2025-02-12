@@ -17,15 +17,7 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS ? process.env.CORS_ALLOWED_ORIGINS.split(',') : ['https://v-b-front.vercel.app', 'https://v-b-admin.vercel.app'];
-
-app.use(cors((req, callback) => {
-    if (allowedOrigins.includes(req.header('Origin')) || !req.header('Origin')) {
-        callback(null, { origin: true });
-    } else {
-        callback(new Error('Not allowed by CORS'));
-    }
-}));
+app.use(cors())
 
 
 // api endpoints
