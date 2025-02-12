@@ -8,10 +8,13 @@ const Login = ({setToken}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
+
+
     const onSubmitHandler = async (e) => {
         try {
             e.preventDefault();
-            const response = await axios.post(backendUrl +"/api/user/admin", { email, password });
+            console.log('Backend URL:', backendUrl);
+            const response = await axios.post(`${backendUrl}/api/user/admin`, { email, password });
             if (response.data.success) {
                 setToken(response.data.token)
             }else {

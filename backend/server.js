@@ -17,11 +17,7 @@ connectCloudinary()
 
 // middlewares
 app.use(express.json())
-app.use(cors({
-  origin: 'https://v-b-adminn.vercel.app', // Allow requests from this specific origin
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify the HTTP methods allowed
-  credentials: true // If you're using cookies/session
-}));
+app.use(cors())
 
 
 // api endpoints
