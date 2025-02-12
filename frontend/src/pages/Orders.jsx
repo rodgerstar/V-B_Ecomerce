@@ -3,9 +3,10 @@ import {ShopContext} from "../context/ShopContext.jsx";
 import Title from "../components/Title.jsx";
 import axios from "axios";
 
+
 const Orders = () => {
 
-    const {token, currency} = useContext(ShopContext)
+    const {token, currency, backendUrl} = useContext(ShopContext)
 
     const [orderData, setorderData] = useState([])
 
@@ -15,7 +16,7 @@ const Orders = () => {
                 return null;
             }
 
-            const response = await axios.post("http://localhost:4000" + '/api/order/userorders', {}, {headers: {token}});
+            const response = await axios.post(backendUrl + '/api/order/userorders', {}, {headers: {token}});
             if (response.data.success) {
                 let allOrdersItem = [];
                 response.data.orders.forEach((order) => {

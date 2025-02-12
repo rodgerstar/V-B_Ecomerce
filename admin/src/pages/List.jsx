@@ -9,7 +9,7 @@ const List = ({token}) => {
 
     const fetchList = async () => {
         try {
-            const response = await  axios.get("http://localhost:4000" + '/api/product/list')
+            const response = await axios.get(backendUrl + '/api/product/list')
             if (response.data.success) {
                 setList(response.data.products)
             }
@@ -24,17 +24,14 @@ const List = ({token}) => {
 
     const removeProduct = async (id) => {
         try{
-
-            const response = await axios.post("http://localhost:4000" + '/api/product/remove', {id} , {headers:{token}})
-
+            const response = await axios.post(backendUrl + '/api/product/remove', {id}, {headers:{token}})
             if (response.data.success) {
                 toast.success(response.data.message)
                 await fetchList();
-            }else {
+            } else {
                 toast.error(response.data.message)
             }
-            
-        }catch (error) {
+        } catch (error) {
             console.log(error)
             toast.error(error.message)
         }
