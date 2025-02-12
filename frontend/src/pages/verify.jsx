@@ -4,8 +4,9 @@ import {useSearchParams} from "react-router-dom";
 import axios from "axios";
 import {toast} from "react-toastify";
 
+
 const Verify = () => {
-     const {navigate, token, setCartItems} = useContext(ShopContext)
+     const {navigate, token, setCartItems, backendUrl} = useContext(ShopContext)
      const [serchParams, setSearchParams] = useSearchParams()
 
     const success = serchParams.get('success')
@@ -16,7 +17,7 @@ const Verify = () => {
              if (!token) {
                  return null
              }
-             const respoonse = await axios.post("http://localhost:4000" + '/api/order/verifyStripe', {success,orderId}, {headers: {token}})
+             const respoonse = await axios.post(backendUrl + '/api/order/verifyStripe', {success,orderId}, {headers: {token}})
 
              if (respoonse.data.success) {
                  setCartItems({})
